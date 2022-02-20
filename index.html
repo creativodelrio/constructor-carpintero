@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Landing page creada para Carpinteros donde entregamos tips para carpinteros, proyectos para carpinteros, ideas para carpinteros">
+    <meta name="keywords" content="carpintero, carpinteros, madera, tornillos, taladro, mdf, proyectos, "/>
+    <meta name="author" content="Homecenter sodimac corono constructor carpinter" />
+    <meta name="copyright" content="Homecenter sodimac corono constructor carpinter" />
+    <link rel="shortcut icon" href="images/favicon.png">
+    <title>Landing El Carpintero  Constructor Sodimac Corona    </title>
+    <style type="text/css">
+        :root {
+            --document-font: 'Fixture-Regular';
+            --color-primario: #fbd600;
+            --color-secundario: #000000;
+            --gris-soft: #b3b3b3;
+            --gris-medium: #666666;
+            --gris-hard: #333333;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 62.5%;
+            scroll-behavior: smooth;
+        }
+        body{
+        font-family: var( --document-font);
+        color: var(--gris-hard);
+        }
+      
+       /* CLASES HEADER */
+       .header-nav{
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+       }
+        .nave{
+            position: fixed;
+            transition: all 01s ease;
+            z-index: 10;
+            width: 100%;
+            padding: 1.0rem;
+        }
+        .nave.active{
+            background: var(--color-primario);
+            box-shadow: -2px 6px 15px -7px #000000;
+        }
+        .nave.active .logo img{
+         max-width: 200px;
+        }   
+        .navegacion ul {
+            display: flex;
+            justify-content: flex-end;
+            flex-flow: wrap;
+        }
+        .navegacion ul li{
+            list-style: none;
+            font-size: 1.6rem;
+            color:var(--color-secundario);
+            text-transform: uppercase;
+            
+        }
+        .navegacion ul li a{
+            color:var(--color-secundario);
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            margin: 0 1rem;
+        }
+        .navegacion ul li a:hover{
+            background:var(--color-secundario);
+            color: var(--color-primario);
+            transition: 0.5s ease-in-out;
+        }
+        .hero{
+            background:url(images/banner-hero.jpg) no-repeat center;
+            background-size: cover;
+            height: 90vh;
+          
+            width: 100%;
+        }
+        .hero-inter{
+            background:var(--color-primario);
+            height: 500px;
+        }
+        .logo img{
+            max-width: 285px;
+            width: 100%;
+        }
+        .txt-hero{
+            position: absolute;
+            top: 40%;
+            left: 5%;;
+            color: #fff;
+            max-width: 650px;
+            transform: translateY(-50%);
+        }
+        .txt-hero h2{
+           font-size: 6rem;
+           color: var(--color-secundario);
+           text-align: left;
+        }
+        .menu-movil{
+            display: none;
+        }
+        .menu-movil div{
+            width: 45px;
+            height: 5px;
+            margin-bottom: 5px;
+            background: var(--color-secundario);
+        }
+         /* CLASES HEADER */
+          /* CLASES PIE */
+          footer{
+              background: var(--gris-soft);
+              padding: 0 1.0rem;
+          }
+            .logo-pie img{
+                width: 100%;
+                max-width: 250px;
+            }
+            .grid-pie{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+               
+            }
+            .social{
+                display: flex;
+            }
+            .social img{
+               max-width: 50px;
+               width: 100%;
+
+            }
+         /* CLASES PIE */
+
+         /* CLASES MAIN */
+
+        b{
+            font-family: 'Fixture-SemiBold';
+         }  
+         .container{
+             max-width: 1300px;
+             margin: auto;
+         } 
+         h2{
+             font-size: 3.5rem;
+             text-align: center;
+         }
+         p{
+             font-size: 1.8rem;
+         }
+         .center{
+             text-align: center;
+         }
+         .somos{
+             position: relative;
+         }
+         .somos h2{
+             position: absolute;
+             top: -6.5rem;
+             background: #fff;
+             display: inline-block;
+             left: 50%;
+             transform: translate(-50%);
+             padding:1rem 2.5rem;
+         }
+         .section{
+             padding: 3.0rem 1rem;
+         }
+         .grid-bene{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 90.0rem;
+            margin: auto;
+            padding: 2.5rem 0;
+         }
+         .grid-bene figure{
+            text-align: center;
+            font-size: 2.0rem;
+            max-width: 250px;
+         }
+         .grid-bene img{
+           width: 200px;
+            
+         }
+         .proyectos{
+             background: url(../images/f-carpintero.jpg) no-repeat bottom var(--color-primario);
+            
+         }
+         .grid-proyectos{
+             display: flex;
+             justify-content: center;
+             gap: 3.0rem;
+             flex-wrap: wrap;
+         }
+         .item-proyecto{
+             background: #ffffff;
+             width: 100%;
+             max-width: 350px;
+             text-align: center;
+             position: relative;
+             height: 330px;
+             margin-top: 8.5rem;
+             border-radius: 0.5rem;
+             box-shadow: -4px 1px 18px -3px rgba(0,0,0,0.66);
+             min-width: 250px;
+         }
+         .item-proyecto h3{
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+         .item-proyecto figure{
+             position: absolute;
+             left: 50%;
+             top: -5.5rem;
+             transform: translateX(-50%);
+         }
+         .item-proyecto img{
+           width: 100%;
+           min-width: 300px;
+        }
+         .item-proyecto div{
+           position: absolute;
+           bottom: 3.0rem;
+           left: 50%;
+           transform: translateX(-50%);
+        }
+        button{
+            background: var(--color-primario);
+            color: var(--color-secundario);
+            padding: 0.5rem 2rem 0.7rem 2rem;
+            border: none;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            width: 100%;
+            font-family: 'Fixture-SemiBold';
+            cursor: pointer;
+        }
+        button:hover{
+            background: var(--color-secundario);
+            color: var(--color-primario);
+        }
+        .marcas{
+            background: var(--gris-soft);
+          
+        }
+        .flex-marcas{
+            display: flex;
+            justify-content: center;
+            gap: 3.0rem;
+            font-size: 4.5rem;
+            text-transform: uppercase;
+            flex-wrap: wrap;
+            padding: 3.5rem 0;
+            color: var(--gris-medium);
+        }
+        .grid-compra{
+            display: flex;
+            gap: 1.0rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .item-compra{
+            max-width: 200px;
+            background: #ffffff;
+            padding: 2.0rem 1.0rem;
+            text-align: left;
+            border-radius: 0.5rem;
+            box-shadow: -4px 1px 18px -3px rgba(0,0,0,0.66);
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+            min-width: 150px;
+            width: 100%;
+        }
+        .item-compra:hover{
+           transform: scale(1.1);
+        }
+        .item-compra img{
+           width: 100%;
+           margin-bottom: 2.0rem;
+        }
+        .item-compra h2{
+           font-size: 2.0rem;
+           text-align: left;
+         }
+         .item-compra p{
+            font-size: 1.6rem;
+            text-align: left;
+            margin-bottom: 2.5rem;
+          }
+          .item-compra h3{
+            font-size: 2.0rem;
+            text-align: left;
+          }
+          .item-compra h5{
+            font-size: 1.3rem;
+            text-align: left;
+            font-family: 'Fixture-Thin';
+            margin-bottom: 1.5rem;
+          }
+          .item-compra button{
+            margin-top: auto;
+          }
+          .noticias{
+              background:var(--gris-hard);
+              position: relative;
+              padding:0 1.0rem;
+          }
+          .noticias::before{
+              position: absolute;
+              content: "";
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: url(images/f-notice.jpg);
+              mix-blend-mode:overlay;
+              opacity: 0.5;
+        }
+          .noticia1{
+              display: flex;
+              gap: 1.0rem;
+              align-items: center;
+              border: #b3b3b3 1px solid;
+              padding: 0.5rem;
+              cursor: pointer;
+              margin-bottom: 2.5rem;
+              transition: 0.2s ease-in-out;
+          }
+          .noticia1:hover{
+            background: var(--gris-soft);
+            transform: scale(1.1);
+        }
+        .noticia1:hover  .text-noticia p{
+         color: var(--color-secundario);
+        }
+        .img-car2{
+            display: flex;
+            margin-top: auto;
+          }
+        .img-car2 img{
+          width: 100%;  
+        }
+          .grid-noti{
+              display: flex;
+              position: relative;
+          }
+          .col-noti{
+              width: 50%;
+          }
+          .fecha{
+              background: var(--color-primario);
+              padding: 2.0rem;
+          }
+          .fecha h6{
+            font-size: 1.2rem;
+            text-align: center;
+        }
+          .text-noticia p{
+            color: #ffffff;
+            font-size: 2.2rem;
+          }
+          .mb{
+              margin-bottom: 3.2rem;
+          }
+          .mt{
+            padding-top: 3.2rem;
+        }
+          .mb2{
+            margin-bottom: 1.2rem;
+        }
+          .text-white{
+            color: #ffffff;
+          }
+          /* CLASES MAIN */
+
+        /* FONTS FACES */
+        @font-face {
+            font-family: 'Fixture-SemiBold';
+            src: url('fonts/Fixture-SemiBold.woff2') format('woff2'),
+                url('fonts/Fixture-SemiBold.woff') format('woff');
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Fixture-Regular';
+            src: url('fonts/Fixture-Regular.woff2') format('woff2'),
+                url('fonts/Fixture-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Fixture-Thin';
+            src: url('fonts/Fixture-Thin.woff2') format('woff2'),
+                url('fonts/Fixture-Thin.woff') format('woff');
+            font-weight: 100;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Fixture-Light';
+            src: url('fonts/Fixture-Light.woff2') format('woff2'),
+                url('fonts/Fixture-Light.woff') format('woff');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+           
+        /* FONTS FACES */  
+
+        /* MEDIA */
+        @media (max-width:1200px) {}
+        @media (max-width: 992px){
+            .grid-noti{
+                display: block;
+                position: relative;
+            }
+            .hero{
+                height: 60vh;
+            }
+            .txt-hero{
+                position: absolute;
+                top: 25%;
+                left: 5%;;
+                color: #fff;
+                max-width: 250px;
+                transform: translateY(-50%);
+            }
+            .txt-hero h2{
+               font-size: 3.0rem;
+               color: var(--color-secundario);
+               text-align: left;
+            }
+            .col-noti{
+                width: 100%;
+            }
+            .grid-bene{
+                
+                justify-content: center;
+             }
+            .menu-movil{
+                display: block;
+            }
+            .navegacion{
+                display: none;
+            }
+            html{
+                font-size: 52.5%;
+            }
+        }
+        @media (max-width: 768px){
+            .somos h2{
+                position: absolute;
+                top: -8.0rem;
+                background: #fff;
+                display: inline-block;
+                left: 50%;
+                transform: translate(-50%);
+                padding:1rem 2.5rem;
+            }
+            h2{
+                font-size: 2.5rem;
+                text-align: center;
+            }
+        }
+         /* MEDIA */
+    </style>
+</head>
+<body>
+    <header  id="somos">
+        <nav class="nave" >
+            <section class="container-fluid header-nav">
+                <figure class="logo"><img src="images/logo-CT.svg" alt="Logo El Constructor Sodimac corona"></figure>
+                <div class="navegacion mb-4">
+                    <ul>
+                        <li><a href="#somos">Somos Carpinteros</a></li>
+                        <li><a href="#beneficios">Beneficios</a></li>
+                        <li><a href="#proyectos">Proyectos</a></li>
+                        <li><a href="#marcas">Marcas</a></li>
+                        <li><a href="#noticias">Noticias</a></li>
+                    </ul>
+                </div>
+                <div class="menu-movil">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </section>
+        </nav>	 
+        <section class="hero" >
+            <div class="txt-hero">
+                <h2 class="mb-4">¿La madera es tu elemento?<br>
+                    <b>este es tu espacio</b></h2>
+            </div>
+        </section>
+    </header>
+    <main>
+            <section class="section" >
+                    <div class="somos">
+                        <h2>SOMOS CARPINTEROS</h2>
+                    </div>
+                    <div class="container" id="beneficios">
+                        <p class="center">
+                            La carpintería es una de nuestras pasiones, ver el material tomar la forma que diseñamos o esta en nuestras cabezas nos hace amar lo que hacemos.Únete a nuestra comunidad y encuentra ideas, consejos, noticias y todo lo que buscas para dar un paso adelante en tu carrera o hobbie. Además pronto tendremos espacio para que compartas tus creaciones con la comunidad, resibas y des retroalimentación; que esperas para ser parte de nosotros y aprovechar grandes beneficios como:
+                        </p>
+                    </div>
+            </section>
+            <section class="section" id="proyectos">
+                   <div class="container">
+                    <h2>BENEFICIOS</h2>
+                    <div class="grid-bene"  >
+                        <figure>
+                            <img src="images/entrega.svg" alt="benefcio entrega El Constructor Sodimac corona">
+                            <figcaption>Entrega en el mismo día</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/corte.svg" alt="benefcio corte El Constructor Sodimac corona">
+                            <figcaption>Corte gratis</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/especialistas.svg" alt="benefcio circulo de especialistas El Constructor Sodimac corona">
+                            <figcaption>Hacer parte del círculo de especialistas</figcaption>
+                        </figure>
+                    </div>
+                   </div>
+             </section>
+             <section class="section proyectos">
+                  <div class="container">
+                      <h2 class="center mb2">PROYECTOS</h2>
+                      <p class="center">Por entretenimiento, por un reto o para ganar dinero, aquí tienes unas buenas ideas en madera.</p>
+                       <div class="grid-proyectos" id="marcas">
+                            <div class="item-proyecto">
+                                <figure><img src="images/proyecto1.png" alt="Proyectomueble esquinero"></figure>
+                                <div>
+                                        <h3>Mueble esquinero</h3>
+                                        <button>ver el proyecto</button>
+                                </div>
+                            </div>
+                            <div class="item-proyecto">
+                                <figure><img src="images/proyecto2.png" alt="Proyectomueble esquinero"></figure>
+                                <div>
+                                        <h3>Mesa auxiliar</h3>
+                                        <button>ver el proyecto</button>
+                                </div>
+                            </div>
+                            <div class="item-proyecto">
+                                <figure><img src="images/proyecto3.png" alt="Proyectomueble esquinero"></figure>
+                                <div>
+                                        <h3>Repisa de juguetes</h3>
+                                        <button>ver el proyecto</button>
+                                </div>
+                            </div>
+                       </div> 
+                  </div>  
+             </section>
+             <section class="section marcas" >
+                    <div class="container center">
+                        <h2 class="mb2">MARCAS</h2>
+                        <p>Tu habilidad es lo principal, pero con los materiales y herramientas llévala a otro nivel</p>
+                        <div class="flex-marcas">
+                            <h4>Vesto</h4>
+                            <h4>FIXSER</h4>
+                            <h4>BOSCH</h4>
+                            <h4>BAUKER</h4>
+                            <h4>KINGPLY</h4>
+                        </div> 
+                        <div class="grid-compra">
+                            <div class="item-compra">
+                                <figure><img src="images/vesto.jpg"></figure>
+                                <h2>MDP VESTO</h2>
+                                <p>Tablero MDP Seda Giorno RH 6mm 1.83x2.50mt</p>
+                                <h3>$128.900UND</h3>
+                                <h5>Disponible para despacho<br>Disponible para retiro</h5>
+                                <button>comprar</button>
+                            </div>
+                            <div class="item-compra">
+                                <figure><img src="images/kingply.jpg"></figure>
+                                <h2>KINGPLY</h2>
+                                <p>Tablero Roble Vintage Resistente A La Humedad 15mmX1.83X2.44m</p>
+                                <h3>$286.900UND</h3>
+                                <h5>Disponible para despacho<br>Disponible para retiro</h5>
+                                <button>comprar</button>
+                            </div>
+                            <div class="item-compra">
+                                <figure><img src="images/mab.jpg"></figure>
+                                <h2>MAB DESIGN</h2>
+                                <p>Lamina Lino</p>
+                                <h3>$489.900</h3>
+                                <h5>Disponible para despacho<br>Disponible para retiro</h5>
+                                <button>comprar</button>
+                            </div>
+                            <div class="item-compra">
+                                <figure><img src="images/kingply2.jpg"></figure>
+                                <h2>KINGPLY</h2>
+                                <p>Tablero MDP Seda Giorno RH 6mm 1.83x2.50mt</p>
+                                <h3>$128.900UND</h3>
+                                <h5>Disponible para despacho<br>Disponible para retiro</h5>
+                                <button>comprar</button>
+                            </div>
+                            <div class="item-compra">
+                                <figure><img src="images/taladro.jpg"></figure>
+                                <h2>BAUKER</h2>
+                                <p>Taladro Percutor 3/8-pulg 600 W 3000Rpm</p>
+                                <h3>$89.900UND</h3>
+                                <h5>Disponible para despacho<br>Disponible para retiro</h5>
+                                <button>comprar</button>
+                            </div>
+                           
+                        </div>   
+                    </div>
+             </section>
+             <section class="noticias " id="noticias">
+                
+                    <div>
+                        <div class="grid-noti">
+                            <div class="col-noti">
+                                <h2 class="text-center text-white mb mt">ÚLTIMAS NOTICIAS</h2>
+                                <div style="max-width: 550px; margin:auto">
+                                   
+                                    <div class="noticia1">
+                                        <div class="fecha">
+                                            <h2>23</h2>
+                                            <h6>Febrero 2022</h6>
+                                        </div>
+                                        <div class="text-noticia">
+                                            <p>Surplex organiza una subasta de máquinas usadas para carpinterías</p>
+                                        </div>
+                                    </div>
+                                    <div class="noticia1">
+                                        <div class="fecha">
+                                            <h2>20</h2>
+                                            <h6>Febrero 2022</h6>
+                                        </div>
+                                        <div class="text-noticia">
+                                            <p>Felder presenta sus novedades en Fimma – Maderalia 2022</p>
+                                        </div>
+                                    </div>
+                                    <div class="noticia1">
+                                        <div class="fecha">
+                                            <h2>17</h2>
+                                            <h6>Febrero 2022</h6>
+                                        </div>
+                                        <div class="text-noticia">
+                                            <p>Las ventas de muebles de oficina crecieron un 13% en 2021</p>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="img-car2 col-noti">
+                                <img src="images/carpintero2.png">
+                            </div>
+                        </div>
+                       
+                        
+                    </div>
+             </section>
+     </main>
+ <footer>
+    <div class="grid-pie" >
+        <div class="social">
+            <figure><a href=""><img src="images/facebook.svg" alt="Facebook Constructor sodimac corona"></a></figure>
+            <figure><a href=""><img src="images/instagram.svg" alt="Instagram Constructor sodimac corona"></a></figure>
+        </div>
+        <figure class="logo-pie">
+            <img src="images/logo-CT.svg">
+        </figure>
+    </div>
+ </footer> 
+ <script type=" text/javascript">
+    const nave = document.querySelector(".nave");
+    window.addEventListener("scroll", function(){
+          nave.classList.toggle("active", window.scrollY >0)  
+    })
+ </script>
+</body>
+</html>
